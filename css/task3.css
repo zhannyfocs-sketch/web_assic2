@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #c85a32;
+  --bg-color: #fdfaf7;
+  --card-bg: #ffffff;
+  --text-color: #3b2d28;
+  --text-muted: #7c6a63;
+  --border-color: #eee3dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem 1.5rem;
+  margin: 0;
+  width: 100%;
+}
+
+.layout-toggle {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-mode {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#mode-grid:checked ~ .controls label[for="mode-grid"],
+#mode-list:checked ~ .controls label[for="mode-list"],
+#mode-magazine:checked ~ .controls label[for="mode-magazine"] {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.card-date {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.products.grid-mode,
+#mode-grid:checked ~ .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.products.list-mode,
+#mode-list:checked ~ .products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.products.list-mode .card,
+#mode-list:checked ~ .products .card {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.products.list-mode .card-img,
+#mode-list:checked ~ .products .card-img {
+  width: 140px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.products.list-mode .card-content,
+#mode-list:checked ~ .products .card-content {
+  padding: 0.75rem 1rem;
+  flex: 1 1 220px;
+}
+
+.products.list-mode .card-date,
+#mode-list:checked ~ .products .card-date {
+  margin-left: auto;
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+}
+
+.products.magazine-mode,
+#mode-magazine:checked ~ .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.products.magazine-mode .lead-item,
+#mode-magazine:checked ~ .products .lead-item {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.products.magazine-mode .lead-item .card-img,
+#mode-magazine:checked ~ .products .lead-item .card-img {
+  height: 280px;
+}
+
+.products.magazine-mode .lead-item h3,
+#mode-magazine:checked ~ .products .lead-item h3 {
+  font-size: 1.4rem;
+}

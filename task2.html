@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 — Bakery Components</title>
+  <link rel="stylesheet" href="css/task2.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Sweet Crumb</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Pastries</a>
+      <a href="#">Workshops</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="btn btn-primary nav-btn">Order Now</button>
+  </header>
+
+  <section class="cards-grid">
+    <article class="card">
+      <div class="card-tag">Bestseller</div>
+      <h3>French Butter Croissant</h3>
+      <p>Flaky butter croissant with a crisp golden crust and a tender, airy interior. Baked fresh every morning.</p>
+      <div class="card-footer">
+        <span class="price">$3.50</span>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Artisan Sourdough Tartine</h3>
+      <p>Long-fermentation bread crafted with natural wheat starter, boasting a dark crispy crust and open crumb structure.</p>
+      <div class="card-footer">
+        <span class="price">$5.00</span>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+    </article>
+  </section>
+
+  <section class="testimonial">
+    <img src="https://via.placeholder.com/60" alt="Avatar" class="avatar">
+    <div class="testimonial-content">
+      <p class="quote">“The best bakery in town! Their eclairs simply melt in your mouth, and the aroma of fresh bread in the morning brightens my whole day.”</p>
+      <span class="author">Anna Smith, Regular Customer</span>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="pricing-card">
+      <h3>Breakfast Set</h3>
+      <div class="price-val">$12</div>
+      <ul>
+        <li>2 Croissants</li>
+        <li>1 Baguette</li>
+        <li>Coffee of choice</li>
+      </ul>
+      <button class="btn btn-outline">Select</button>
+    </div>
+
+    <div class="pricing-card recommended">
+      <div class="badge">Popular</div>
+      <h3>Party Catering</h3>
+      <div class="price-val">$45</div>
+      <ul>
+        <li>Assorted Mini Pastries (20 pcs)</li>
+        <li>3 Types of Artisan Bread</li>
+        <li>Dessert Selection</li>
+        <li>Free Delivery</li>
+      </ul>
+      <button class="btn btn-primary">Order Set</button>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Baking Class</h3>
+      <div class="price-val">$30</div>
+      <ul>
+        <li>Croissant Masterclass</li>
+        <li>All Ingredients Included</li>
+        <li>Tasting & Drinks</li>
+      </ul>
+      <button class="btn btn-outline">Book Class</button>
+    </div>
+  </section>
+
+  <nav class="pagination">
+    <button class="btn-page">&laquo; Prev</button>
+
+    <div class="page-numbers">
+      <a href="#" class="page-link active">1</a>
+      <a href="#" class="page-link">2</a>
+      <a href="#" class="page-link">3</a>
+    </div>
+
+    <button class="btn-page">Next &raquo;</button>
+    <span class="results-count">Showing 1 - 10 of 50</span>
+  </nav>
+
+</body>
+</html>
